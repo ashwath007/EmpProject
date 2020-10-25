@@ -1,0 +1,65 @@
+
+
+
+<div>
+<div class="text-center">
+<%= link_to 'New Entry', new_entry_path, class:"btn btn-outline-primary text-info" %>
+
+</div>
+
+ <% v=0%>
+ <div class="mt-5">
+   <% @entries.each do |entry| %>
+     <%v+=1%>
+     <div class="row mb-3">
+     <div class="col sm">
+     <div class="card shadow">
+     
+     <div class="card-body">
+     <div class="container">
+     <div class="row">
+       <div class="col-6">
+       <p><%=v%></p>
+       <h5 class="card-title"><b>Name: </b><%= entry.name %></h5>
+       <h5 class="card-title"><b>Age: </b><%= entry.age %></h5>
+       </div>
+       <div class="col-6">
+       <p></p>
+
+       <p class="card-text"><b>Gender: </b><%= entry.gender %></p>
+       <p class="card-text"><b>Designation: </b><%= entry.des %></p>
+       </div>
+     </div>
+     </div>
+       
+
+
+       <div class="row text-center">
+       <div class="col-4">
+       <div>
+       <%= link_to 'Show', entry, class:"btn btn-info text-white" %>
+       </div>
+       </div>
+       <div class="col-4">
+       <div>
+       <%= link_to 'Edit', edit_entry_path(entry), class:"btn btn-warning text-white" %>
+       </div>
+       </div>
+       <div class="col-4">
+       <div>
+       <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger text-white" %>
+       </div>
+       </div>
+       </div>
+      
+     </div>
+
+     </div>
+     </div>
+     </div>
+     
+   <% end %>
+ </div>
+</div>
+
+

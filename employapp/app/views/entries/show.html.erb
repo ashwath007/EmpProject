@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<div class="mt-5">
+<div class ="card shadow">
+ <div class="pl-4 pt-2 pb-3">
+<div class="h9">
+<p>
+  <strong>Name:</strong>
+  <%= @entry.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @entry.age %>
+</p>
+
+
+<p>
+  <strong>Gender:</strong>
+  <%= @entry.gender %>
+</p>
+
+<p>
+  <strong>Des:</strong>
+  <%= @entry.des %>
+</p>
+</div>
+<div class="text=left">
+<%= link_to 'Edit', edit_entry_path(@entry) ,class:"btn btn-info rounded text-white"%> 
+<%= link_to 'Back', entries_path ,class:"btn btn-danger rounded text-white" %>
+</div>
+</div>
+</div>
+</div>
